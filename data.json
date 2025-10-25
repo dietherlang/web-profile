@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Blog Platform",
+    "description": "A full-stack blogging platform using Node.js and MongoDB.",
+    "url": "https://github.com/dietherlang/blog-platform"
+  },
+  {
+    "name": "E-commerce Store",
+    "description": "A modern online store built with React and Firebase.",
+    "url": "https://github.com/dietherlang/ecommerce-store"
+  },
+  {
+    "name": "Chat App",
+    "description": "Real-time chat application using Socket.io and Express.",
+    "url": "https://github.com/dietherlang/chat-app"
+  },
+  {
+    "name": "Task Manager",
+    "description": "Organize tasks with priority and deadlines using JavaScript.",
+    "url": "https://github.com/dietherlang/task-manager"
+  },
+  {
+    "name": "JavaScript Game",
+    "description": "A browser-based game developed with vanilla JavaScript, featuring interactive gameplay and dynamic animations.",
+    "url": "https://github.com/dietherlang/js-game"
+  }
+]

@@ -1,0 +1,115 @@
+/* ===== Reset & Base ===== */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #0a0a0a;
+    color: #cfcfcf;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* ===== Header / Navbar ===== */
+header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 15px 30px; background: #0d0d0d;
+    position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,123,255,0.3);
+}
+header .logo { font-size: 1.8em; color: #007bff; font-weight: bold; letter-spacing: 1px; }
+nav ul { list-style: none; display: flex; gap: 25px; }
+nav ul li a {
+    text-decoration: none; color: #cfcfcf; font-weight: 600;
+    padding: 8px 12px; border-radius: 5px; transition: all 0.3s ease;
+}
+nav ul li a:hover { 
+    background: #007bff; color: #fff; 
+}
+.menu-toggle { display: none; font-size: 2em; cursor: pointer; color: #007bff; }
+
+/* ===== Sections ===== */
+section { padding: 80px 20px; max-width: 1000px; margin: auto; }
+.section-title { font-size: 2.2em; color: #007bff; margin-bottom: 40px; text-align: center; text-transform: uppercase; letter-spacing: 1px; }
+
+/* ===== About Section ===== */
+.about { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 50px; text-align: left; }
+.about img { width: 200px; height: 200px; border-radius: 50%; border: 3px solid #007bff; transition: transform 0.4s ease, box-shadow 0.4s ease; }
+.about img:hover { transform: scale(1.1) rotate(5deg); box-shadow: 0 0 25px #007bff; }
+.profile-info h1 { color: #007bff; font-size: 2.5em; margin-bottom: 15px; }
+.profile-info p { font-size: 1.05em; color: #aaa; line-height: 1.6; }
+
+/* ===== Work & Education Cards ===== */
+.work-card, .edu-card {
+    background: #121212; padding: 25px; border-radius: 15px; 
+    box-shadow: 0 6px 25px rgba(0,123,255,0.2); margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+.work-card:hover, .edu-card:hover { transform: translateY(-8px) scale(1.02); box-shadow: 0 0 30px #007bff; }
+.work-card h3, .edu-card h3 { color: #007bff; margin-bottom: 10px; }
+.work-card span, .edu-card span { color: #aaa; font-size: 0.9em; margin-bottom: 10px; display: block; }
+.work-card p, .edu-card p { color: #ccc; font-size: 0.95em; }
+
+/* ===== Skills ===== */
+.skill-cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; }
+.skill-card {
+    background: #121212; padding: 25px; border-radius: 15px; width: 240px; text-align: center;
+    box-shadow: 0 6px 20px rgba(0,123,255,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skill-card:hover { transform: translateY(-10px) scale(1.05); box-shadow: 0 0 25px #007bff; }
+.skill-card h3 { color: #007bff; margin-bottom: 10px; }
+.progress-bar { width: 100%; background: #222; border-radius: 50px; margin-top: 15px; overflow: hidden; }
+.progress-bar span {
+    display: block; height: 10px; width: 0%;
+    background: #007bff; border-radius: 50px;
+    animation: fillProgress 1.5s forwards;
+}
+@keyframes fillProgress {
+    to { width: var(--progress-width); }
+}
+
+/* ===== Certifications ===== */
+.cert-list { list-style: none; padding-left: 0; }
+.cert-list li { background: #121212; padding: 15px; border-radius: 10px; margin-bottom: 10px; box-shadow: 0 4px 15px rgba(0,123,255,0.2); transition: all 0.3s ease; }
+.cert-list li:hover { transform: translateY(-5px); box-shadow: 0 0 20px #007bff; }
+
+/* ===== GitHub Repos ===== */
+.repo-cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; }
+.repo-card {
+    background: #121212; padding: 20px; border-radius: 12px; width: 260px; text-align: center;
+    box-shadow: 0 6px 20px rgba(0,123,255,0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.repo-card:hover { transform: translateY(-10px) scale(1.05); box-shadow: 0 0 25px #007bff; }
+.repo-card h3 { color: #007bff; margin-bottom: 10px; }
+.repo-card p { font-size: 0.9em; color: #ccc; margin-bottom: 10px; }
+.repo-card a {
+    text-decoration: none; color: #111; background: #007bff; padding: 6px 12px; border-radius: 5px;
+    margin: 0 5px; display: inline-block; transition: background 0.3s, color 0.3s;
+}
+.repo-card a:hover { background: #0056b3; color: #fff; }
+
+/* ===== Footer ===== */
+footer { text-align: center; padding: 25px; color: #007bff; border-top: 1px solid #222; font-weight: bold; letter-spacing: 1px; }
+
+/* ===== Animations ===== */
+.animate-left { opacity: 0; transform: translateX(-25px); animation: slideLeft 1s forwards; }
+.animate-right { opacity: 0; transform: translateX(25px); animation: slideRight 1s forwards; }
+.animate-up { opacity: 0; transform: translateY(20px); animation: slideUp 1s forwards; }
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 0.9s; }
+
+@keyframes slideLeft { to { opacity: 1; transform: translateX(0); } }
+@keyframes slideRight { to { opacity: 1; transform: translateX(0); } }
+@keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    nav ul { 
+        display: none; flex-direction: column; background: #0d0d0d; 
+        position: absolute; top: 60px; right: 0; width: 200px; padding: 20px; gap: 10px; border-radius: 8px;
+    }
+    nav ul.active { display: flex; }
+    .menu-toggle { display: block; color: #007bff; }
+    .about { flex-direction: column; text-align: center; gap: 20px; }
+    .profile-info { text-align: center; }
+}
